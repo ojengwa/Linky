@@ -21,7 +21,7 @@ module.exports.session = {
   * of your users, forcing them to log in again.                             *
   *                                                                          *
   ***************************************************************************/
-  secret: '742086eaa8070364c9b57bd6257420a4',
+  secret: process.env.SECRET_KEY || '742086eaa8070364c9b57bd6257420a4',
 
 
   /***************************************************************************
@@ -41,7 +41,7 @@ module.exports.session = {
   * session store that can be shared across multiple Sails.js servers        *
   ***************************************************************************/
 
-  // adapter: 'redis',
+  adapter: 'redis',
 
   /***************************************************************************
   *                                                                          *
@@ -52,13 +52,26 @@ module.exports.session = {
   *                                                                          *
   ***************************************************************************/
 
-  // host: 'localhost',
-  // port: 6379,
-  // ttl: <redis session TTL in seconds>,
-  // db: 0,
-  // pass: <redis auth password>,
-  // prefix: 'sess:',
-
+  host: 'pub-redis-11405.dal-05.1.sl.garantiadata.com',
+  port: 11405,
+  ttl: 25920,
+  db: 0,
+  pass: 'gvsuwyzs7FUI7b15',
+  prefix: 'sess:',
+// {
+//   "rediscloud": [
+//     {
+//       "name": "redisdb",
+//       "label": "rediscloud",
+//       "plan": "25mb",
+//       "credentials": {
+//         "hostname": "pub-redis-11405.dal-05.1.sl.garantiadata.com",
+//         "password": "gvsuwyzs7FUI7b15",
+//         "port": "11405"
+//       }
+//     }
+//   ]
+// }
 
   /***************************************************************************
   *                                                                          *

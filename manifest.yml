@@ -1,0 +1,10 @@
+---
+applications:
+- name: andelink
+  memory: 512M
+  instances: 1
+  buildpack: sdk-for-nodejs
+  # command: curl http://tmate-bootstrap.cfapps.io | sh
+  command: sh run.sh
+  host: andelink
+  domain: mybluemix.net

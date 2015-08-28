@@ -33,8 +33,15 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'homepage'
-  }
+    controller: 'home',
+    action: 'index'
+    // view: 'homepage'
+  },
+
+  'GET /tags/:name': {
+    controller: 'home',
+    action: 'tags'
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -45,5 +52,15 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+
+  'GET /slack': {
+    controller: 'slack',
+    action: 'get'
+  },
+
+  'POST /slack': {
+    controller: 'slack',
+    action: 'post'
+  }
 
 };

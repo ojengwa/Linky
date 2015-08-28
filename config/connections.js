@@ -28,9 +28,9 @@ module.exports.connections = {
   * Installed by default.                                                    *
   *                                                                          *
   ***************************************************************************/
-  localDiskDb: {
-    adapter: 'sails-disk'
-  },
+  // localDiskDb: {
+  //   adapter: 'sails-disk'
+  // },
 
   /***************************************************************************
   *                                                                          *
@@ -56,14 +56,26 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
-  someMongodbServer: {
+  // localDB: {
+  //   adapter: 'sails-mongo',
+  //   host: 'localhost',
+  //   port: 27017,
+  //   // user: 'username',
+  //   // password: 'password',
+  //   // database: 'your_mongo_db_name_here'
+  // },
+
+  // Production Database COnfiguration
+
+  prodDB: {
     adapter: 'sails-mongo',
-    host: 'localhost',
-    port: 27017,
-    // user: 'username',
-    // password: 'password',
-    // database: 'your_mongo_db_name_here'
+    host: 'ds037812.mongolab.com',
+    port: 37812,
+    user: 'IbmCloud_ka0a0a36_1vbktb4e_o80or610',
+    password: 'uh_oTIa3hsDUN7KdH1TDxWbLsgnF4_SL',
+    database: 'IbmCloud_ka0a0a36_1vbktb4e'
   },
+
 
   /***************************************************************************
   *                                                                          *
